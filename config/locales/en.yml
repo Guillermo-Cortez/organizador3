@@ -1,0 +1,8 @@
+---
+en:
+  categories:
+    new_category: New category
+  hello: Hello world
+  task:
+    errors:
+      invalid_due_date: Invalid due date

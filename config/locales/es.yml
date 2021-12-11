@@ -1,0 +1,15 @@
+---
+es:
+  categories:
+    new_category: Nueva categoría
+  hello: Hello world
+  task:
+    errors:
+      invalid_due_date: Fecha invalida.
+  activerecord:
+    models:
+      category:
+        one: Categoria
+        others: Categorías
+  common:
+    back: Atrás
