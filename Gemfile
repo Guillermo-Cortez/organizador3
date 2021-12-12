@@ -35,6 +35,8 @@ gem 'rails-i18n'
 gem 'devise'
 gem 'cocoon'
 gem 'cancancan'
+
+gem 'carrierwave', '~> 2.0'
 #------------------------------------------------------------------------
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -16,4 +16,5 @@ class Category < ApplicationRecord
     validates :name, :description, presence: true
     #Validacion de unicidad en cuanto a cierto campo
     validates :name, uniqueness: { case_sensitive: false }
+
 end
