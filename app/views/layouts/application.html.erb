@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <%= current_user[:email] if !current_user.blank?%>
     <%= link_to "Cerrar session", destroy_user_session_path, method: :delete %>
     <%= link_to "Tareas", tasks_path %>
     <%= link_to "Categorias", categories_path %>

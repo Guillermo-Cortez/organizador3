@@ -26,6 +26,10 @@ class Task < ApplicationRecord
   #Validacion personalizada
   validate :due_date_validity
 
+  #Callbacks
+  before_create :create_code
+
+
   #Permite guardar atributos de modelos relacionados en esta caso de la relacion con participant
   accepts_nested_attributes_for :participating_users, allow_destroy: true
 
@@ -34,4 +38,9 @@ class Task < ApplicationRecord
     return if due_date > Date.today
     errors.add :due_date, I18n.t('task.errors.invalid_due_date')
   end
+
+  def create_code
+    self.code = "#{owner_id}#{Time.now.to_i.to_s(36)}#{SecureRandom.hex(8)}"
+  end
+  
 end
